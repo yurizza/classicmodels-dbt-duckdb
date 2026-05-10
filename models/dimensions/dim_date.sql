@@ -11,6 +11,7 @@ with date_spine as (
 select
     date_day                                as date_id,
     date_day                                as full_date,
+    date_trunc('month', date_day)::date     as date_month,
     extract('year'    from date_day)::int   as year,
     extract('quarter' from date_day)::int   as quarter,
     extract('month'   from date_day)::int   as month,
