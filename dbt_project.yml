@@ -1,0 +1,25 @@
+# Konfigurasi utama proyek dbt Classic Models
+name: 'classicmodels_dw'
+version: '1.0.0'
+config-version: 2
+
+# Menghubungkan proyek dengan profil koneksi yang telah dibuat sebelumnya
+profile: 'classicmodels_dw'
+
+# Mendefinisikan jalur folder untuk komponen dbt
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Konfigurasi Materialisasi per Layer
+models:
+  classicmodels_dw:
+    staging:
+      +materialized: view    # Abstraksi awal dari source data
+    dimensions:
+      +materialized: table   # Master data yang dioptimalkan
+    marts:
+      +materialized: table   # Tabel fakta final untuk kebutuhan analitik

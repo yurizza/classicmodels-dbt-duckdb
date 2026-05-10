@@ -1,0 +1,8 @@
+# Konfigurasi profil koneksi dbt untuk adapter DuckDB
+classicmodels_dw:
+  outputs:
+    dev:
+      type: duckdb
+      path: 'classicmodels.duckdb'  # Menghubungkan dbt ke file database lokal
+      threads: 1                    # Jumlah thread eksekusi paralel
+  target: dev

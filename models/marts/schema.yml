@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: fct_payments
+    description: "Tabel fakta yang mencatat setiap transaksi pembayaran dari pelanggan."
+    columns:
+      - name: check_number
+        description: "ID unik transaksi pembayaran"
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_key
+        description: "Kunci asing yang menghubungkan ke tabel dim_customer"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_key
+
+      - name: payment_date_id
+        description: "Kunci asing yang menghubungkan ke tabel dim_date"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_id
+
+      - name: amount
+        description: "Nilai nominal pembayaran"
+        tests:
+          - not_null

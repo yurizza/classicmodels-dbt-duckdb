@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw_data
+    schema: main
+    description: "Kumpulan data mentah (raw) dari sistem sumber Classic Models"
+    tables:
+      - name: customers
+        description: "Data profil pelanggan"
+      - name: orders
+        description: "Informasi transaksi pemesanan"
+      - name: orderdetails
+        description: "Detail item per pesanan"
+      - name: products
+        description: "Katalog produk perusahaan"
+      - name: employees
+        description: "Data internal karyawan"
+      - name: offices
+        description: "Informasi lokasi kantor cabang"
+      - name: payments
+        description: "Riwayat transaksi pembayaran pelanggan"
+      - name: productlines
+        description: "Kategori dan deskripsi lini produk"
