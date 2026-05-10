@@ -8,7 +8,7 @@ Tujuan utamanya adalah mengubah data operasional mentah menjadi *Business Intell
 ### **🗺️ Source Data Architecture (ERD)**
 Sebelum proses transformasi dimulai, berikut adalah struktur data mentah (*source*) yang digunakan dalam proyek ini:
 
-![Classic Models ERD](images/mysql-sample-database.png.png)
+![Classic Models ERD](images/mysql-sample-database.png)
 
 > **Catatan:** ERD di atas menunjukkan hubungan antar tabel operasional seperti `Customers`, `Orders`, `Payments`, dan `Employees` yang menjadi fondasi dalam pembentukan model Dimensi dan Fakta di tahap berikutnya.
 ---
